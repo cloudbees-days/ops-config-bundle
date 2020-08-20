@@ -1,7 +1,7 @@
 apiVersion: "1"
 id: "1-ops"
 description: "Workshop Ops Managed Controller Config Bundle"
-version: "1"
+version: "2"
 plugins:
   - "plugins.yaml"
 jcasc:
