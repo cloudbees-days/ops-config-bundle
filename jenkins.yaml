@@ -47,6 +47,17 @@ unclassified:
     hookSecretConfigs:
     - credentialsId: "b014019c-a308-46b2-a6f6-dc93307cd476"
     hookUrl: "https://workshop.cb-sa.io/teams-ops/github-webhook/"
+  globallibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "pipeline-library"
+      retriever:
+        modernSCM:
+          scm:
+            github:
+              credentialsId: "field-workshops-github-app"
+              repoOwner: "cloudbees-days"
+              repository: "pipeline-library"
   hibernationConfiguration:
     activities:
     - "build"
