@@ -18,7 +18,7 @@ jenkins:
     rawHtml:
       disableSyntaxHighlighting: false
   numExecutors: 0
-  systemMessage: "Jenkins configured using CloudBees CI CasC v3"
+  systemMessage: "Jenkins configured using CloudBees CI CasC v4"
 cloudbees-msteams-integration:
   config:
     hooks:
