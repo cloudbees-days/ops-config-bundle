@@ -12,13 +12,19 @@ credentials:
           appID: "77731"
           description: "GitHub App Credential for CloudBees CI: field-workshops"
           id: "field-workshops-github-app"
-          privateKey: "{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}"
+          privateKey: "${opsGitHubAppPrivateKey}"
+      - gitHubApp:
+          apiUri: "https://api.github.com"
+          appID: "77562"
+          description: "CloudBees CI Workshop GitHub App credential"
+          id: "cloudbees-ci-workshop-github-app"
+          privateKey: "${workshopGitHubAppPrivateKey}"
 jenkins:
   markupFormatter:
     rawHtml:
       disableSyntaxHighlighting: false
   numExecutors: 0
-  systemMessage: "Jenkins configured using CloudBees CI CasC v5"
+  systemMessage: "Jenkins configured using CloudBees CI CasC v6"
 cloudbees-msteams-integration:
   config:
     hooks:
