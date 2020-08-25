@@ -19,6 +19,12 @@ credentials:
           description: "CloudBees CI Workshop GitHub App credential"
           id: "cloudbees-ci-workshop-github-app"
           privateKey: "${workshopGitHubAppPrivateKey}"
+      - usernamePassword:
+          description: "Admin OC/Jenkins CLI Token"
+          id: "admin-cli-token"
+          password: "${apiToken}"
+          scope: GLOBAL
+          username: "admin"
 jenkins:
   markupFormatter:
     rawHtml:
@@ -41,9 +47,6 @@ beekeeper:
   upgrades:
     autoDowngradePlugins: false
     autoUpgradePlugins: false
-notificationConfiguration:
-  enabled: true
-  router: "localOnlyFallback"
 unclassified:
   experimentalPlugins:
     enabled: true
