@@ -19,6 +19,12 @@ credentials:
           description: "CloudBees CI Workshop GitHub App credential"
           id: "cloudbees-ci-workshop-github-app"
           privateKey: "${workshopGitHubAppPrivateKey}"
+      - gitHubApp:
+          apiUri: "https://api.github.com"
+          appID: "79627"
+          description: "CloudBees Feature Flags Workshop GitHub App base credential"
+          id: "cloudbees-ff-workshop-github-app"
+          privateKey: "${featureFlagWorkshopGitHubAppPrivateKey}"
       - usernamePassword:
           description: "Admin OC/Jenkins CLI Token"
           id: "admin-cli-token"
@@ -30,7 +36,7 @@ jenkins:
     rawHtml:
       disableSyntaxHighlighting: false
   numExecutors: 0
-  systemMessage: "Jenkins configured using CloudBees CI CasC v9"
+  systemMessage: "Jenkins configured using CloudBees CI CasC v10"
 cloudbees-msteams-integration:
   config:
     hooks:
@@ -39,14 +45,6 @@ cloudbees-msteams-integration:
       optedIn: true
       scmUsername: "beedemo-dev"
       webhook: "{AQAAABAAAADQZ3HBE5vm0Z0S+veTQNxWBYAEGMVOe/zM9SZLoK9ZkgxfjoUEpKZrKknLteY1GfzYh62sSEbrcD+SA4sy7wZjf9y/9V7IkSaMOZOdf4QAhMZF7qIkZs5EEL/8sPrzSVly2UcbqchFVLV5ea06eST+C2m6pmXtW3BG6JdVzD7k9q1mjfmx7otYnq1+nJkzujw3zw9155RfbVakm9FPioPK/F82f7oitgCZr0L4xylLy5G3OaQXjND5Kpjy1WlM+AmXJn9oOKA3sFgWVlPSRntFpUxqEJhk/wyKQIMaQaNa6+0=}"
-beekeeper:
-  enabled: true
-  securityWarnings:
-    enabledForCore: true
-    enabledForPlugins: true
-  upgrades:
-    autoDowngradePlugins: false
-    autoUpgradePlugins: false
 unclassified:
   experimentalPlugins:
     enabled: true
