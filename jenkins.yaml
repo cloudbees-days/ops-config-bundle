@@ -23,7 +23,7 @@ credentials:
           apiUri: "https://api.github.com"
           appID: "79627"
           description: "CloudBees Feature Flags Workshop GitHub App base credential"
-          id: "cloudbees-ff-workshop-github-app"
+          id: "cloudbees-feature-flags-workshop-github-app"
           privateKey: "${featureFlagWorkshopGitHubAppPrivateKey}"
       - usernamePassword:
           description: "Admin OC/Jenkins CLI Token"
@@ -36,7 +36,7 @@ jenkins:
     rawHtml:
       disableSyntaxHighlighting: false
   numExecutors: 0
-  systemMessage: "Jenkins configured using CloudBees CI CasC v10"
+  systemMessage: "Jenkins configured using CloudBees CI CasC v11"
 cloudbees-msteams-integration:
   config:
     hooks:
