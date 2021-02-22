@@ -1,5 +1,6 @@
 plugins:
 - id: antisamy-markup-formatter
+- id: cloudbees-disk-usage-simple
 - id: cloudbees-github-reporting
 - id: cloudbees-groovy-view
 - id: cloudbees-monitoring
