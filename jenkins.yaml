@@ -6,7 +6,7 @@ credentials:
           description: "Webhook secret for https://github.com/apps/cloudbees-ci-field-workshops"
           id: "b014019c-a308-46b2-a6f6-dc93307cd476"
           scope: SYSTEM
-          secret: "{AQAAABAAAAAw/2f4xElDTLO1oq5z/1XsTa7AjSZsokT/7+cF8YOeDpCkp3oHG86kQEFaSdWdyz7poOWqJO3VHWaGDDWjVu6zcg==}"
+          secret: "${gitHubWebhookSecret}"
       - gitHubApp:
           apiUri: "https://api.github.com"
           appID: "77731"
@@ -21,6 +21,12 @@ credentials:
           privateKey: "${workshopGitHubAppPrivateKey}"
       - gitHubApp:
           apiUri: "https://api.github.com"
+          appID: "101639"
+          description: "Staging CloudBees CI Workshop GitHub App credential"
+          id: "staging-cloudbees-ci-workshop-github-app"
+          privateKey: "${staging-workshopGitHubAppPrivateKey}"
+      - gitHubApp:
+          apiUri: "https://api.github.com"
           appID: "79627"
           description: "CloudBees Feature Flags Workshop GitHub App base credential"
           id: "cloudbees-feature-flags-workshop-github-app"
@@ -31,20 +37,18 @@ credentials:
           password: "${apiToken}"
           scope: GLOBAL
           username: "admin"
+      - usernamePassword:
+          description: "Staging Admin OC/Jenkins CLI Token"
+          id: "staging-admin-cli-token"
+          password: "${staging-apiToken}"
+          scope: GLOBAL
+          username: "admin"
 jenkins:
   markupFormatter:
     rawHtml:
       disableSyntaxHighlighting: false
   numExecutors: 0
-  systemMessage: "Jenkins configured using CloudBees CI CasC v11"
-cloudbees-msteams-integration:
-  config:
-    hooks:
-    - cbci_id: "admin"
-      id: "83f2a3c3-605b-4af9-bf16-c931c8ff7e37"
-      optedIn: true
-      scmUsername: "beedemo-dev"
-      webhook: "{AQAAABAAAADQZ3HBE5vm0Z0S+veTQNxWBYAEGMVOe/zM9SZLoK9ZkgxfjoUEpKZrKknLteY1GfzYh62sSEbrcD+SA4sy7wZjf9y/9V7IkSaMOZOdf4QAhMZF7qIkZs5EEL/8sPrzSVly2UcbqchFVLV5ea06eST+C2m6pmXtW3BG6JdVzD7k9q1mjfmx7otYnq1+nJkzujw3zw9155RfbVakm9FPioPK/F82f7oitgCZr0L4xylLy5G3OaQXjND5Kpjy1WlM+AmXJn9oOKA3sFgWVlPSRntFpUxqEJhk/wyKQIMaQaNa6+0=}"
+  systemMessage: "Jenkins configured using CloudBees CI CasC v1"
 unclassified:
   experimentalPlugins:
     enabled: true
@@ -53,7 +57,7 @@ unclassified:
   gitHubPluginConfig:
     hookSecretConfigs:
     - credentialsId: "b014019c-a308-46b2-a6f6-dc93307cd476"
-    hookUrl: "https://workshop.cb-sa.io/teams-ops/github-webhook/"
+    hookUrl: "https://staging-cbci.workshop.cb-sa.io/admin-ops/github-webhook/"
   globallibraries:
     libraries:
     - defaultVersion: "master"
